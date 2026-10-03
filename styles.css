@@ -174,6 +174,9 @@ section{
     background:#CCFF00;
     transition: 1s;
     border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+
 }
 
 .group{
@@ -209,6 +212,41 @@ section{
     object-position: center;
     display: block;
     border-radius: 16px;
+}
+
+.card-info{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+    background: linear-gradient(
+        transparent 35%, rgba(0, 0, 0, 0.9)
+    );
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 
+    opacity 0.5s ease, transform 0.5s ease;
+
+}
+
+.card:hover .card-info{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-info h1{
+    color:#CCFF00;
+    font-size: 35px;
+    margin-bottom: 10px;
+
+}
+
+.card-info p{
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 
