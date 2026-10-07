@@ -129,7 +129,6 @@ body{
 }
 
 section{
-    min-height: 100vh;
     padding-top: 100px;
 }
 
@@ -141,6 +140,7 @@ section{
     flex-direction: column;
     text-align: center;
     overflow: hidden;
+    min-height: 100vh;
 }
 
 #home .homeh1{
@@ -164,7 +164,7 @@ section{
 }
 
 .carousel{
-    margin: 50px auto;
+    margin: 30px auto 20px;
     width: 100%;
     display: flex;
     overflow-x: hidden;
@@ -205,6 +205,7 @@ section{
 
 #games{
     padding-top: 50px;
+    min-height: 100vh;
 }
 
 .card:hover{
@@ -272,8 +273,9 @@ section{
 #trending{
     width:90%;
     max-width: 1250px;
-    margin: 120px auto;
+    margin: 20px auto 100px;
     color: #fff ;
+    min-height: 100vh;
 }
 
 .t-h{
@@ -282,14 +284,123 @@ section{
 
 .t-h h1{
     color: #CCFF00;
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
     font-weight: 800;
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
 
 .t-h p{
-    
+    color: #CCFF00;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.gl{
+    width: 100%;
+
+}
+
+.gl ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    border-top: 1px solid   rgba(204, 255, 0, 0.25);
+}
+
+.gl li{
+    position: relative;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+    transition: 
+    background-color 0.3s ease,
+    padding-left 0.3s ease;
+}
+ 
+.gl li:nth-child(odd){
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.gl li span{
+    width: 50px;
+    color: #CCFF00;
+    font-size: 14px;
+    font-weight: 700;
+    opacity: 0.45;
+    transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.gl li a{
+    color: #28282B;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    transform-origin: left center;
+    transition: 
+    color 0.3s ease,
+    transform 0.3s ease,
+    letter-spacing 0.3s ease;
+}
+
+.gl li:hover{
+    background: rgba(204, 255, 0, 0.06);
+    padding-left: 35px;
+}
+
+.gl li:hover span{
+    color: #CCFF00;
+    opacity: 1;
+    transform: translateX(5px);
+
+
+}
+
+.gl li:hover a{
+    color: #CCFF00;
+    transform: scale(1.15);
+    letter-spacing: 1px;
+
+
+
+}
+
+.gl li::after{
+    content: "";
+    position: absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height: 2px;
+    background: #CCFF00;
+    box-shadow: 0 0 12ox rgba(204, 255, 0, 0.8);
+    transition: width 0.4s ease;
+
+}
+
+.gl li:hover::after{
+    width: 100%;
+}
+
+@media(max-width: 700px){
+    .gl ul{
+        grid-template-columns: 1fr;
+
+    }
+    .gl li:nth-child(odd){
+        border-right: none;
+
+
+    }
+    .gl li{
+        height: 75px;
+    }
 }
 
 
