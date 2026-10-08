@@ -291,7 +291,7 @@ section{
 }
 
 .t-h p{
-    color: #CCFF00;
+    color: rgba(255, 255, 255, 0.65);
     font-size: 1rem;
     letter-spacing: 0.5px;
 }
@@ -338,7 +338,7 @@ section{
 }
 
 .gl li a{
-    color: #28282B;
+    color: #fff;
     text-decoration: none;
     font-size: 20px;
     font-weight: 600;
@@ -391,17 +391,194 @@ section{
 @media(max-width: 700px){
     .gl ul{
         grid-template-columns: 1fr;
-
     }
+
     .gl li:nth-child(odd){
         border-right: none;
-
-
     }
+
     .gl li{
         height: 75px;
     }
 }
 
+#trusted{
+    width: 90%;
+    max-width: 1250px;
+    margin: 100px auto 120px;
+    color: #fff;
+    min-height: 100vh;
+}
 
+.tru-h{
+    margin-bottom: 50px;
+}
 
+.tru-h h1{
+    color: #CCFF00;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.tru-h p{
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.tru-g{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.s-c{
+    position: relative;
+    min-height: 150px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background:rgba(255, 255, 255, 0.02);
+    overflow: hidden;
+    transition: 
+    background 0.3s ease,
+    border-color 0.3s ease
+    transform -.3s ease;
+}
+
+.s-n{
+    color: #CCFF00;
+    font-size: 14px;
+    font-weight: 700;
+    opacity: 0.5;
+}
+
+.s-n h2{
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    transition: 
+    color 0.3s ease
+    trasnform 0.3s ease;
+
+}
+
+.s-c p{
+    color:rgba(255, 255, 255, 0.55);
+    font-size: 14px;
+}
+
+.aro{
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #CCFF00;
+    font-size: 28px;
+    opacity: 0.4;
+    transition: 
+    opacity 0.3s ease,
+    trasnform 0.3s ease;
+}
+
+.s-c:hover{
+    background-color: rgba(204, 255, 0, 0.06);
+    border-color: rgba(204, 255, 0, 0.6);
+    transform: translateX(-5px);
+}
+
+.s-c:hover h2{
+    color: #CCFF00;
+    transform: translateX(5px);
+}
+
+.s-c:hover .s-n{
+    opacity: 1;
+}
+
+.s-c:hover .aro{
+    opacity: 1;
+    transform: translate(5px, -50%);
+}
+
+.s-c::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width:0;
+    height: 3px;
+    background: #CCFF00;
+    box-shadow: 0 0 15px rgba(204, 255, 0, 0.8);
+    transition: width 0.4s ease;
+}
+
+.s-c:hover::after{
+    width: 100%;
+}
+
+@media(max-width: 700px){
+    .tru-g{
+        grid-template-columns: 1fr;
+    }
+
+    .s-c{
+        min-height: 120px;
+        padding: 25px;
+    }
+}
+
+#contact{
+    width: 90%;
+    max-width: 1250px;
+    margin: 20px auto 40px;
+    color: #fff;
+}
+
+.c-t{
+    margin-bottom: 20px;
+}
+
+.c-t h1{
+    color: #CCFF00;
+    font-size:  clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.c-t p{
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.c-b{
+    display: inline-block;
+    padding: 12px 25px;
+    color: #28282B;
+    background-color: #CCFF00;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border: 2px solid #CCFF00;
+    transition: 
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.c-b:hover{
+    background: transparent;
+    color: #CCFF00;
+    transform: translateY(-4px);
+}
